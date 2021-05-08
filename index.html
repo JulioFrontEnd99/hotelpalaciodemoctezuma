@@ -378,18 +378,18 @@
         </div>
         <div class="segundo-contenedor">
           <h2>Mandanos un Mensaje</h2>
-          <form name="contact" method="POST" data-netlify="true">
+          <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
             <div class="formu-grupo">
-              <label for="nombre-input">Ingresa tu nombre*</label>
+              <label for="nombre-input">Nombre*</label>
               <input name="nombre" id="nombre-input" type="text" placeholder="Nombre" required="">
               <input name="apellido" id="apellido" type="text" placeholder="Apellido" required="">
             </div>
             <div class="formu-grupo">
-              <label for="correo-input">Ingresa tu correo</label>
+              <label for="correo-input">Correo Electronico</label>
               <input name="email" id="correo-input" type="text" placeholder="example@gmail.com" required="">
             </div>
             <div class="formu-grupo">
-              <label for="telefono-input">Ingresa tu número de teléfono</label>
+              <label for="telefono-input">Número Teléfonico</label>
               <input name="phone" id="telefono-input" type="text" placeholder="999 999 99 99" required="">
             </div>
             <div class="formu-grupo">
