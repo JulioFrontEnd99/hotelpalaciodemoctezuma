@@ -33,7 +33,7 @@ ul{
 }
 
 .desaparecer{
-	animation: vanish 5s forwards;
+	animation: vanish 1s forwards;
 }
 
 @keyframes vanish {
@@ -252,6 +252,7 @@ ul{
   text-align: center;
   height: 100vh;
   padding: 0 100px;
+	margin-top: 50px
 }
 
 .slider-content h1{
@@ -351,6 +352,17 @@ ul{
   }
 }
 
+@media (max-width: 425px){
+	.slider-item {
+    height: 50vh;
+    top: 20px;
+	}
+	.slider-content-main {
+    padding: 0 30px;
+		height: 50vh;
+	}
+
+}
 
 
 /* NOTE: SECCIÓN NOSOTROS */
@@ -679,13 +691,22 @@ ul{
     margin-bottom: 17px;
     }
     #carousel-img img:nth-child(1) {
-    content:url("../media/hb1mob.jpg");
+    content:url("../media/img/hb1mob.jpg");
     }
     #carousel-img img:nth-child(2) {
-    content:url("../media/hb2mob.jpg");
+    content:url("../media/img/hb2mob.jpg");
     }
     #carousel-img img:nth-child(3) {
-    content:url("../media/hb3mob.jpg");
+    content:url("../media/img/hb3mob.jpg");
+    }
+		#carousel-img img:nth-child(4) {
+    content:url("../media/img/hb3mob.jpg");
+    }
+		#carousel-img img:nth-child(5) {
+    content:url("../media/img/hb3mob.jpg");
+    }
+		#carousel-img img:nth-child(6) {
+    content:url("../media/img/hb3mob.jpg");
     }
 }
 
@@ -703,7 +724,7 @@ ul{
 /* NOTE: SECCIÓN --- VIDEO PRESENTACIÓN */
 .videobgg{
 	background: linear-gradient(45deg, rgba(53,66,125,0.8) 0%,
-	                                 rgba(72, 95, 201, 0.4) 50%), url('../media/videobg.png');
+	                                 rgba(72, 95, 201, 0.4) 50%), url('../media/img/videobg.png');
 	background-size: cover;
 	background-position: center;
 	overflow: hidden;
@@ -920,7 +941,7 @@ ul{
 
 
 /* NOTE: GALERÍA 1 SECCIÓN */
-.galeria{
+/*.galeria{
 	background: #fbfbfb;
 }
 
@@ -978,6 +999,69 @@ ul{
 	.panelglr:nth-last-of-type(5){
 		display: none;
 	}
+} */
+
+.menu-wrapper{
+    margin-top: 2rem;
+}
+.menu-item{
+    position: relative;
+    cursor: pointer;
+}
+
+.menu-item img{
+    width: 100%;
+    display: block;
+}
+
+.menu-overlay{
+    height: 130px;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    padding: 1.5rem;
+    opacity: 0;
+    transition: var(--transition);
+    overflow: hidden;
+}
+.menu-overlay-content{
+    overflow: hidden;
+    transition: all 0.5s ease;
+    transform: translateY(100%);
+}
+.menu-overlay-content div{
+    display: flex;
+    justify-content: space-between;
+}
+.menu-overlay-content h2{
+    text-transform: capitalize;
+    margin-bottom: 0;
+}
+.menu-overlay-content h5{
+    text-transform: uppercase;
+    color: var(--grey);
+    margin-top: 0.6rem;
+    font-size: 0.8rem;
+}
+.menu-item:hover .menu-overlay{
+    opacity: 1;
+}
+.menu-item:hover .menu-overlay-content{
+    transform: translateY(0);
+}
+
+@media screen and (min-width: 678px){
+    .menu-wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (min-width: 1200px){
+    .menu-wrapper{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 /* NOTE: CONTACTO - 1 SECCIÓN */
@@ -1007,7 +1091,7 @@ ul{
 
 .formulario-contacto .primero-contenedor{
 	background: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-	url("/media/img/contacto.png") center/cover no-repeat;
+	url("../media/img/contacto.png") center/cover no-repeat;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -1131,3 +1215,11 @@ ul{
 		width: 100vw;
 	}
 }
+
+
+/*/* NOTE: Google review */
+.goorv{
+	width: 100%;
+}
+
+/* NOTE: Footer */
